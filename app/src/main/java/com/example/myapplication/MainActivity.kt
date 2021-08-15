@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     var recorder: MediaRecorder? = null
     var audiofile: File? = null
 
+    //superbderrick.github.io.summerplayerview
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -57,7 +58,7 @@ class MainActivity : AppCompatActivity() {
                     cursor?.moveToFirst()
                     val path = column_index?.let { cursor?.getString(it) }
                     Log.e("Path", "" + path)
-                    val intent = Intent(this, VideoView::class.java)
+                    val intent = Intent(this, VideoActivity::class.java)
                     intent.putExtra("Path", path)
                     startActivity(intent)
                 } finally {
